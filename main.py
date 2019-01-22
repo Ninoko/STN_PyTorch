@@ -57,7 +57,7 @@ if __name__ == '__main__':
     model = LeNet(activation=GELU()).to(device)
     model.apply(weights_init)
     optimizer = optim.Adam(params=model.parameters(),
-                           lr=0.005)
+                           lr=0.0005)
     criterion = CrossEntropyLoss().to(device)
 
     for epoch_id in range(NUM_EPOCH):
